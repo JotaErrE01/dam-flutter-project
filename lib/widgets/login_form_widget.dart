@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
+import 'package:project_dam/screens/home_screen.dart';
 
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({super.key});
@@ -74,6 +75,10 @@ class LoginFormWidget extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {
               debugPrint('Iniciar sesión');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
             },
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all<Color>(
